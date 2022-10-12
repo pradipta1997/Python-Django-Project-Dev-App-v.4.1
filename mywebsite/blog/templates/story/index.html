@@ -1,0 +1,25 @@
+{% load static %}   <!--UNTUK MENG-LOAD FILE STATIC PADA FILE HTML YG BERDASARKAN FILE SETTINGS (STATICFILES_DIRS)-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Project | {{ title }}</title>
+</head>
+<body>
+
+    <img style="width: 100%; height: 400px;" src="{% static "story/img/story.jpg" %}" alt="">
+
+    <h1>{{ title }} Page</h1>
+    <h4>Contributor: {{ contributor }}</h4>
+    <p>Halaman ini sudah memiliki template sendiri didalam folder story
+        <br>dan template ini sudah menggunakan template variable.
+    </p>
+    <p>Directory: {{ directory }}</p>
+    
+    <a href="/blog" title="">Back</a>
+
+</body>
+</html>

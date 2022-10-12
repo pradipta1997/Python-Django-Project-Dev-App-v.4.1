@@ -1,0 +1,41 @@
+{% load static %} <!--UNTUK MENG-LOAD FILE STATIC PADA FILE HTML YG BERDASARKAN FILE SETTINGS (STATICFILES_DIRS)-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Project | {{ title }}</title>
+</head>
+<body>
+
+    <img style="width: 100%; height: 300px;" src="{% static "img/about.jpg" %}" alt=""> <!--USING STATIC WAY BASED IN SETTINGS.py FILE-->
+
+    <h1>{{ title }} Page</h1>
+    
+    <p>
+        Written by  : {{ contributor }}<br>
+        Project     : {{ project }}<br>
+        Level       : Basic<br>
+        Instagram   : pradiptaramadhan30<br>
+        Github      : pradiptaramadhan1997<br>
+        Whatsapp    : 081264716918<br>
+    </p>
+    <p>
+        Directory   : {{ directory }}
+    </p>
+
+    <!-- DIGUNAKAN KEMBALI JIKA DI MENU ABOUT TERDAPAT MENU LAGI -->
+    <!-- <ul>
+        {% for link,name in nav %}
+        <li>
+            <a href="{{ link }}" title="">{{ name }}</a>
+        </li>
+        {% endfor %}
+    </ul> -->
+
+    <a href="/" title="Home">Back</a>
+  
+</body>
+</html>
